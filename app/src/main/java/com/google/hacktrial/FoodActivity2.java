@@ -1,27 +1,27 @@
 package com.google.hacktrial;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class MainActivity extends AppCompatActivity {
+
+public class FoodActivity2 extends AppCompatActivity {
 
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_food2);
 
         webView = findViewById(R.id.web_view);
 
         webView.setWebViewClient(new WebViewClient(){
 
-            ProgressDialog pd = new ProgressDialog(MainActivity.this);
+            ProgressDialog pd = new ProgressDialog(FoodActivity2.this);
 
             public void onPageStarted(WebView wv, String url, Bitmap b)
             {
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         webView.getSettings().setUseWideViewPort(true);// use responsive layout
         webView.getSettings().setLoadWithOverviewMode(true);// Zoom out if the content width is greater than the width of the viewport
         webView.setOverScrollMode(WebView.OVER_SCROLL_NEVER);
-        webView.loadUrl("https://ods.od.nih.gov/HealthInformation/dictionary.aspx");
+        webView.loadUrl("https://www.healthline.com/search?q1=Food");
 
     }
 }
